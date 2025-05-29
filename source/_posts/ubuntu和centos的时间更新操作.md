@@ -1,6 +1,8 @@
 ---
 title: ubuntu和centos的时间更新操作
 date: 2025-05-29 10:38:04
+categories:
+	- 技术
 tags:
 	- linux
 ---
