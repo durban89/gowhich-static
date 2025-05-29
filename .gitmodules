@@ -1,3 +1,4 @@
 [submodule "themes/indigo"]
 	path = themes/indigo
-	url = git@github.com:durban89/gowhich-static-themes-indigo.git
+    url = git@github.com:durban89/gowhich-static-themes-indigo.git
+    branch = master
