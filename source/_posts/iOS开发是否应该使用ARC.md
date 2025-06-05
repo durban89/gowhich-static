@@ -1,7 +1,7 @@
 ---
 title: iOS开发是否应该使用ARC
 tags:
-  - ios
+  - iOS
 categories:
   - 技术
 date: 2025-06-03 16:43:01
