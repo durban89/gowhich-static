@@ -3,3 +3,5 @@
 git clone git@github.com:durban89/gowhich-static.git gowhich-static
 git submodule update --init
 ```
+
+主题使用说明
