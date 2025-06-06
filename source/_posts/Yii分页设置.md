@@ -1,7 +1,7 @@
 ---
 title: Yii分页设置
 tags:
-  - php
+  - PHP
 categories:
   - 技术
 date: 2025-06-03 15:03:26

@@ -2,7 +2,7 @@
 title: Yii CDbCriteria常用方法
 date: 2025-06-03 15:01:08
 tags:
-	- php
+	- PHP
 categories:
 	- 技术
 ---

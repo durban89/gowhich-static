@@ -4,7 +4,7 @@ date: 2025-05-29 10:38:04
 categories:
 	- 技术
 tags:
-	- linux
+	- Linux
 ---
 
 在Ubuntu Server上，设置NTP时间同步非常简单，就如下几步：

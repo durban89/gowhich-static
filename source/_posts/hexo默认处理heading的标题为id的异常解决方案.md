@@ -2,7 +2,7 @@
 title: hexo默认处理heading的标题为id的异常解决方案
 date: 2025-05-29 17:08:34
 tags:
-	- hexo
+	- Hexo
 categories:
 	- 技术
 ---

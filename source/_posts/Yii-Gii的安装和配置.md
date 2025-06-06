@@ -1,7 +1,7 @@
 ---
 title: Yii-Gii的安装和配置
 tags:
-  - php
+  - PHP
 categories:
   - 技术
 date: 2025-06-03 15:05:48

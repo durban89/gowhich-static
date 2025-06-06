@@ -2,7 +2,7 @@
 title: Hello World
 date: 2025-05-28 16:10:14
 tags:
-	- hexo
+	- Hexo
 categories:
 	- 技术
 ---

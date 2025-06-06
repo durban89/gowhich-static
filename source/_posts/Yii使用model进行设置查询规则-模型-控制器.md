@@ -1,8 +1,8 @@
 ---
 title: Yii使用model进行设置查询规则/模型/控制器
 tags:
-  - php
-  - yii
+  - PHP
+  - Yii
 categories:
   - 技术
 date: 2025-06-05 10:52:51

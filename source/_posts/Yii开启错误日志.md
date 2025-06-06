@@ -2,7 +2,7 @@
 title: Yii开启错误日志
 date: 2025-06-03 14:56:27
 tags:
-	- php
+	- PHP
 categories:
 	- 技术
 ---

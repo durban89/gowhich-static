@@ -1,7 +1,7 @@
 ---
 title: Yii CRUD操作
 tags:
-  - php
+  - PHP
 categories:
   - 技术
 date: 2025-06-03 15:11:26

@@ -4,7 +4,7 @@ date: 2025-05-29 15:25:04
 categories:
     - 技术
 tags:
-	- php
+	- PHP
 ---
 
 下面举个例子：

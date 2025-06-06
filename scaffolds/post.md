@@ -2,7 +2,7 @@
 title: {{ title }}
 date: {{ date }}
 tags:
-    - php
+    - PHP
 categories:
     - 技术
 ---

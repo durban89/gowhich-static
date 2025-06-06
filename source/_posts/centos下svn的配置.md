@@ -1,7 +1,7 @@
 ---
 title: Centos下SVN的配置
 tags:
-  - linux
+  - Linux
   - Centos
 categories:
   - 技术
