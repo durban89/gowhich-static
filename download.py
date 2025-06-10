@@ -143,6 +143,34 @@ class WebPageAnalyzer:
             
         return pattern.sub(replace, text)
 
+    def replace_empty_keywords(self, text, replacements=None, max_replacements=10):
+        """替换文本中的指定关键词
+        
+        Args:
+            text: 要处理的文本
+            replacements: 替换规则字典，默认为常见技术术语的规范化
+            max_replacements: 最多替换的关键词数量，默认为10
+        """
+        if replacements is None:
+            replacements = {
+                ' ': '-'
+            }
+            
+        # 限制替换的关键词数量
+        if len(replacements) > max_replacements:
+            print(f"警告: 替换规则数量超过最大限制({max_replacements})，只使用前{max_replacements}个")
+            replacements = {k: replacements[k] for k in list(replacements)[:max_replacements]}
+            
+        # 使用正则表达式进行关键词替换
+        import re
+        pattern = re.compile(r'\b(' + '|'.join(re.escape(key) for key in replacements.keys()) + r')\b', re.IGNORECASE)
+        
+        def replace(match):
+            key = match.group(0)
+            return replacements.get(key.lower(), key)
+            
+        return pattern.sub(replace, text)
+
     def generate_front_matter(self, title="默认标题", categories=None, tags=None):
         """生成Markdown文件的前置元数据
         
@@ -227,6 +255,7 @@ if __name__ == "__main__":
     if analyzer.fetch_page():
         title = analyzer.get_title().split('|')[0].split(' - ')[0].split(':')[0].strip()
         title = analyzer.replace_keywords(title)
+        title = analyzer.replace_empty_keywords(title)
         output_file = f"./source/_posts/{title}.md"
         print(f"页面标题: {analyzer.get_title()}")
         print(f"页面总链接数: {analyzer.count_elements('a')}")
