@@ -153,7 +153,9 @@ class WebPageAnalyzer:
         """
         if replacements is None:
             replacements = {
-                ' ': '-'
+                ' ': '-',
+                '/': '-',
+                '#': '井'
             }
             
         # 限制替换的关键词数量
