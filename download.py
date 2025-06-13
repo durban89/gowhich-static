@@ -54,11 +54,89 @@ class WebPageAnalyzer:
                 meta_tags.append(meta.attrs)
         return meta_tags
 
-    def find_elements_by_class(self, class_name):
-        """查找具有指定类的所有元素"""
+    def remove_hidden_elements(self, element):
+        """递归移除元素中带有 style='display:none' 的子元素
+        
+        Args:
+            element: BeautifulSoup元素对象
+        """
+        from bs4 import Tag
+        
+        # 检查当前元素是否隐藏
+        if isinstance(element, Tag) and element.has_attr('style'):
+            style = element.get('style', '')
+            if 'display:none' in style.lower().replace(' ', ''):
+                # 如果当前元素隐藏，则移除整个元素
+                element.decompose()
+                return None
+        
+        # 递归处理子元素
+        if isinstance(element, Tag):
+            for child in list(element.children):  # 使用list()复制列表，避免在迭代时修改
+                if isinstance(child, Tag) and child.has_attr('style'):
+                    style = child.get('style', '')
+                    if 'display:none' in style.lower().replace(' ', ''):
+                        # 移除隐藏的子元素
+                        child.decompose()
+                        continue  # 跳过已移除元素的处理
+                
+                # 递归处理子元素的子元素
+                self.remove_hidden_elements(child)
+        
+        return element
+
+    def remove_copyright_elements(self, element):
+        """移除元素中 class 为 entry-copyright 的子元素
+        
+        Args:
+            element: BeautifulSoup元素对象
+        """
+        from bs4 import Tag
+        
+        # 检查当前元素是否是标签
+        if isinstance(element, Tag):
+            # 查找并移除所有 class 包含 entry-copyright 的子元素
+            for child in element.find_all(class_="entry-copyright"):
+                child.decompose()
+            
+            # 递归处理所有子元素
+            for child in element.children:
+                self.remove_copyright_elements(child)
+        
+        return element
+
+    def find_elements_by_class(self, class_name, remove_hidden=True, remove_copyright=True):
+        """查找具有指定类的所有元素
+        
+        Args:
+            class_name: 要查找的类名
+            remove_hidden: 是否移除隐藏元素
+            remove_copyright: 是否移除版权元素
+        """
         elements = []
         if self.soup:
             elements = self.soup.find_all(class_=class_name)
+            
+            # 如果需要移除隐藏元素
+            if remove_hidden and elements:
+                filtered_elements = []
+                for element in elements:
+                    # 移除隐藏的子元素
+                    cleaned_element = self.remove_hidden_elements(element)
+                    if cleaned_element:  # 确保元素未被完全移除
+                        filtered_elements.append(cleaned_element)
+                elements = filtered_elements
+            
+            # 如果需要移除版权元素
+            if remove_copyright and elements:
+                remove_elements = []
+                for element in elements:
+                    removed_element = self.remove_copyright_elements(element)
+                    if removed_element:
+                        remove_elements.append(removed_element)
+
+                elements = remove_elements
+        
         return elements
 
     def count_elements_by_class(self, class_name):
@@ -78,8 +156,82 @@ class WebPageAnalyzer:
                 'attributes': attrs
             })
         return elements_info
+        
+    def extract_code_language(self, element):
+        """从代码块元素及其子元素中提取语言信息
+        
+        Args:
+            element: BeautifulSoup元素对象
+        """
+        # 尝试从元素自身的class属性中提取语言
+        if element.has_attr('class'):
+            classes = element.get('class')
+            for cls in classes:
+                # 常见的代码语言标记前缀
+                if cls.startswith('language-') or cls.startswith('lang-'):
+                    return cls.split('-', 1)[1]
+                    
+                # 直接匹配常见语言名称
+                common_languages = [
+                    'bash',
+                    'objectivec',
+                'python', 'java', 
+                'javascript', 'html', 
+                'css', 'php', 'sql', 
+                'bash', 'json', 'c', 'cpp', 
+                'csharp', 'go', 'rust', 
+                'swift', 'kotlin', 'ruby', 
+                'perl', 'dart', 'scala', 'typescript']
+                if cls.lower() in common_languages:
+                    return cls.lower()
+        
+        # 尝试从data-language属性中提取
+        if element.has_attr('data-language'):
+            return element.get('data-language')
+            
+        # 尝试从父元素的class中提取
+        parent = element.parent
+        if parent and parent.has_attr('class'):
+            classes = parent.get('class')
+            for cls in classes:
+                if cls.startswith('language-') or cls.startswith('lang-'):
+                    return cls.split('-', 1)[1]
+        
+        # 尝试从子元素中提取语言信息
+        # 特别处理 <pre><code class="language-*">...</code></pre> 结构
+        if element.name == 'pre':
+            code_elements = element.find_all('code', recursive=False)
+            for code in code_elements:
+                if code.has_attr('class'):
+                    classes = code.get('class')
+                    for cls in classes:
+                        if cls.startswith('language-') or cls.startswith('lang-'):
+                            return cls.split('-', 1)[1]
+                            
+                        if cls.lower() in common_languages:
+                            return cls.lower()
+                            
+                # 尝试data-language属性
+                if code.has_attr('data-language'):
+                    return code.get('data-language')
+        
+        # 尝试从第一个非空文本子元素中提取语言信息
+        # 适用于一些markdown渲染器生成的结构
+        if element.name == 'pre':
+            first_child = next((child for child in element.children if hasattr(child, 'strip') and child.strip()), None)
+            if first_child and first_child.strip().startswith(('```', '~~~')):
+                # 提取markdown代码块开头的语言标记
+                # 例如: ```python 或 ~~~javascript
+                code_block_start = first_child.strip()
+                for marker in ('```', '~~~'):
+                    if code_block_start.startswith(marker):
+                        lang_part = code_block_start[len(marker):].strip()
+                        if lang_part and ' ' not in lang_part:
+                            return lang_part
+                            
+        return None    
 
-    def html_to_markdown(self, html_content=None):
+    def html_to_markdown(self, html_content=None, preserve_code_language=True):
         """将HTML内容转换为Markdown格式
         
         Args:
@@ -92,16 +244,33 @@ class WebPageAnalyzer:
             html_content = str(self.soup)
         
         try:
-            markdown = markdownify.markdownify(html_content, heading_style="ATX")
+            # 设置代码语言提取回调函数
+            if preserve_code_language:
+                markdown = markdownify.markdownify(
+                    html_content, 
+                    heading_style="ATX",
+                    code_language_callback=self.extract_code_language
+                )
+            else:
+                markdown = markdownify.markdownify(html_content, heading_style="ATX")
+                
             return markdown
         except Exception as e:
             print(f"HTML转Markdown失败: {e}")
             return None
 
-    def get_element_markdown(self, element):
+    def get_element_markdown(self, element, preserve_code_language=True):
         """将单个元素转换为Markdown格式"""
         try:
-            return markdownify.markdownify(str(element), heading_style="ATX")
+            # 设置代码语言提取回调函数
+            if preserve_code_language:
+                return markdownify.markdownify(
+                    str(element), 
+                    heading_style="ATX",
+                    code_language_callback=self.extract_code_language
+                )
+            else:
+                return markdownify.markdownify(str(element), heading_style="ATX")
         except Exception as e:
             print(f"元素转Markdown失败: {e}")
             return None
@@ -144,34 +313,41 @@ class WebPageAnalyzer:
         return pattern.sub(replace, text)
 
     def replace_empty_keywords(self, text, replacements=None, max_replacements=10):
-        """替换文本中的指定关键词
+        """替换文本中的指定字符
         
         Args:
             text: 要处理的文本
-            replacements: 替换规则字典，默认为常见技术术语的规范化
-            max_replacements: 最多替换的关键词数量，默认为10
+            replacements: 替换规则字典
+            max_replacements: 最多替换的规则数量，默认为10
         """
         if replacements is None:
             replacements = {
+                '&quot;': '',
+                '“': '-',
+                '”': '-',
                 ' ': '-',
                 '/': '-',
                 '#': '井'
             }
             
-        # 限制替换的关键词数量
+        # 限制替换的规则数量
         if len(replacements) > max_replacements:
             print(f"警告: 替换规则数量超过最大限制({max_replacements})，只使用前{max_replacements}个")
             replacements = {k: replacements[k] for k in list(replacements)[:max_replacements]}
-            
-        # 使用正则表达式进行关键词替换
-        import re
-        pattern = re.compile(r'\b(' + '|'.join(re.escape(key) for key in replacements.keys()) + r')\b', re.IGNORECASE)
         
-        def replace(match):
-            key = match.group(0)
-            return replacements.get(key.lower(), key)
-            
-        return pattern.sub(replace, text)
+        # 先处理空格，将连续空格合并为单个连字符
+        if ' ' in replacements:
+            text = text.replace(' ', replacements[' '])
+            # 合并连续的连字符
+            while replacements[' '] * 2 in text:
+                text = text.replace(replacements[' '] * 2, replacements[' '])
+        
+        # 处理其他替换规则
+        for old_char, new_char in replacements.items():
+            if old_char != ' ':  # 跳过已处理的空格
+                text = text.replace(old_char, new_char)
+        
+        return text
 
     def generate_front_matter(self, title="默认标题", categories=None, tags=None):
         """生成Markdown文件的前置元数据
@@ -271,7 +447,9 @@ if __name__ == "__main__":
             
             # 获取第一个匹配元素的Markdown格式
             first_element = elements[0]
-            element_md = analyzer.get_element_markdown(first_element)
+            element_md = analyzer.get_element_markdown(
+                first_element,
+                preserve_code_language=True)
             
             if element_md:
                 # 保存Markdown到文件（默认添加前置元数据）
