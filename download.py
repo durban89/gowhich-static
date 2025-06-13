@@ -175,13 +175,13 @@ class WebPageAnalyzer:
                 common_languages = [
                     'bash',
                     'objectivec',
-                'python', 'java', 
-                'javascript', 'html', 
-                'css', 'php', 'sql', 
-                'bash', 'json', 'c', 'cpp', 
-                'csharp', 'go', 'rust', 
-                'swift', 'kotlin', 'ruby', 
-                'perl', 'dart', 'scala', 'typescript']
+                    'python', 'java', 
+                    'javascript', 'html', 
+                    'css', 'php', 'sql', 
+                    'bash', 'json', 'c', 'cpp', 
+                    'csharp', 'go', 'rust', 
+                    'swift', 'kotlin', 'ruby', 
+                    'perl', 'dart', 'scala', 'typescript']
                 if cls.lower() in common_languages:
                     return cls.lower()
         
@@ -322,7 +322,12 @@ class WebPageAnalyzer:
         """
         if replacements is None:
             replacements = {
-                '&quot;': '',
+                '、': '-',
+                '）': '-',
+                '（': '-',
+                '，': '-',
+                ',': '-',
+                '&quot;': '-',
                 '“': '-',
                 '”': '-',
                 ' ': '-',
@@ -348,6 +353,18 @@ class WebPageAnalyzer:
                 text = text.replace(old_char, new_char)
         
         return text
+
+    def clean_title(self, title):
+        """清理标题，移除末尾的连字符和多余空格
+        
+        Args:
+            title: 原始标题字符串
+        """
+        # 移除末尾的所有连字符和空格
+        cleaned_title = title.rstrip('- ').lstrip()
+        
+        # 如果标题为空，返回默认值
+        return cleaned_title if cleaned_title else "未命名文章"
 
     def generate_front_matter(self, title="默认标题", categories=None, tags=None):
         """生成Markdown文件的前置元数据
@@ -434,6 +451,8 @@ if __name__ == "__main__":
         title = analyzer.get_title().split('|')[0].split(' - ')[0].split(':')[0].strip()
         title = analyzer.replace_keywords(title)
         title = analyzer.replace_empty_keywords(title)
+        title = analyzer.clean_title(title)
+
         output_file = f"./source/_posts/{title}.md"
         print(f"页面标题: {analyzer.get_title()}")
         print(f"页面总链接数: {analyzer.count_elements('a')}")
