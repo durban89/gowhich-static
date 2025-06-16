@@ -1,5 +1,5 @@
 ---
-title: 编译错误error
+title: "编译错误error: stray ‘343’ in program的解决"
 tags:
   - C
 categories:
