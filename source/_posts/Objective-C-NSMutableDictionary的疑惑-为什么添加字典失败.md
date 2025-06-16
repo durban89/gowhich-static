@@ -1,7 +1,7 @@
 ---
-title: Objective-c NSMutableDictionary的疑惑（为什么添加字典失败）
+title: Objective-C NSMutableDictionary的疑惑（为什么添加字典失败）
 tags:
-  - Objective-c
+  - Objective-C
 categories:
   - 技术
 date: 2025-06-13 14:05:51

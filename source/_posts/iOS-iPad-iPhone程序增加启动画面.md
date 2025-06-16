@@ -22,11 +22,11 @@ date: 2025-06-11 11:07:03
 **Default-PortraitUpsideDown.png iPad专用竖向启动画面(Home按钮在屏幕上面)，可省略 768x1024或者768x1004**  
 **Default-LandscapeLeft.png iPad专用横向启动画面(可省略), 1024x768或者1024x748**  
 **Default-LandscapeRight.png iPad专用横向启动画面(可省略), 1024x768或者1024x748**  
-**Default.png iPhone默认启动图片，如果没有提供上面几个iPad专用启动图片，则在iPad上运行时也使用Default.png（不推荐） 320x480或者320x460**  
-**[[email protected]](/cdn-cgi/l/email-protection) iPhone4启动图片640x960或者640x920**  
-为了在iPad上使用上述的启动画面，你还需要在xxxx\_info.plist中加入key(根据下拉菜单中的可选项选择):
+**Default.png iPhone默认启动图片，如果没有提供上面几个iPad专用启动图片，则在iPad上运行时也使用Default.png（不推荐） 320x480或者320x460**
+**Default\@2x.png iPhone4启动图片640x960或者640x920**  
+为了在iPad上使用上述的启动画面，你还需要在`xxxx_info.plist`中加入key(根据下拉菜单中的可选项选择):
 
-**UISupportedInterfaceOrientations** 或 **Supported interface orientations**  
+**UISupportedInterfaceOrientations** 或 **Supported interface orientations**  
 同时，为其加入值(根据下拉菜单中的可选项选择):
 
 **UIInterfaceOrientationPortrait 或 Portrait (bottom home button)**  
