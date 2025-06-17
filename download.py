@@ -322,6 +322,8 @@ class WebPageAnalyzer:
         """
         if replacements is None:
             replacements = {
+                ': ': '-',
+                ':': '-',
                 '、': '-',
                 '）': '-',
                 '（': '-',
@@ -383,10 +385,8 @@ class WebPageAnalyzer:
             
         # 获取当前时间
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        
-        title = title.split('|')[0].split(' - ')[0].split(':')[0].strip()
-
         title = self.replace_keywords(title)
+        title = title.split('|')[0].split(' - ')[0].split(':')[0].strip()
 
         front_matter = f"""---
 title: {title}
@@ -450,7 +450,7 @@ if __name__ == "__main__":
     
     analyzer = WebPageAnalyzer(target_url)
     if analyzer.fetch_page():
-        title = analyzer.get_title().split('|')[0].split(' - ')[0].split(':')[0].strip()
+        title = analyzer.get_title().split('|')[0].split(' - ')[0].strip()
         title = analyzer.replace_keywords(title)
         title = analyzer.replace_empty_keywords(title)
         title = analyzer.clean_title(title)
