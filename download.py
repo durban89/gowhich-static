@@ -312,7 +312,7 @@ class WebPageAnalyzer:
             
         return pattern.sub(replace, text)
 
-    def replace_empty_keywords(self, text, replacements=None, max_replacements=10):
+    def replace_empty_keywords(self, text, replacements=None, max_replacements=100):
         """替换文本中的指定字符
         
         Args:
