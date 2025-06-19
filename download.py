@@ -165,6 +165,7 @@ class WebPageAnalyzer:
         """
         # 尝试从元素自身的class属性中提取语言
         if element.has_attr('class'):
+            print("code detect 1")
             classes = element.get('class')
             for cls in classes:
                 # 常见的代码语言标记前缀
@@ -187,11 +188,13 @@ class WebPageAnalyzer:
         
         # 尝试从data-language属性中提取
         if element.has_attr('data-language'):
+            print("code detect 2")
             return element.get('data-language')
             
         # 尝试从父元素的class中提取
         parent = element.parent
         if parent and parent.has_attr('class'):
+            print("code detect 3")
             classes = parent.get('class')
             for cls in classes:
                 if cls.startswith('language-') or cls.startswith('lang-'):
@@ -200,6 +203,7 @@ class WebPageAnalyzer:
         # 尝试从子元素中提取语言信息
         # 特别处理 <pre><code class="language-*">...</code></pre> 结构
         if element.name == 'pre':
+            print("code detect 4")
             code_elements = element.find_all('code', recursive=False)
             for code in code_elements:
                 if code.has_attr('class'):
@@ -217,17 +221,19 @@ class WebPageAnalyzer:
         
         # 尝试从第一个非空文本子元素中提取语言信息
         # 适用于一些markdown渲染器生成的结构
-        if element.name == 'pre':
-            first_child = next((child for child in element.children if hasattr(child, 'strip') and child.strip()), None)
-            if first_child and first_child.strip().startswith(('```', '~~~')):
-                # 提取markdown代码块开头的语言标记
-                # 例如: ```python 或 ~~~javascript
-                code_block_start = first_child.strip()
-                for marker in ('```', '~~~'):
-                    if code_block_start.startswith(marker):
-                        lang_part = code_block_start[len(marker):].strip()
-                        if lang_part and ' ' not in lang_part:
-                            return lang_part
+        # if element.name == 'pre':
+        #     print("code detect 5")
+        #     first_child = next((child for child in element.children if hasattr(child, 'strip') and child.strip()), None)
+        #     if first_child and first_child.strip().startswith(('```', '~~~')):
+        #         print("code detect 5-1")
+        #         # 提取markdown代码块开头的语言标记
+        #         # 例如: ```python 或 ~~~javascript
+        #         code_block_start = first_child.strip()
+        #         for marker in ('```', '~~~'):
+        #             if code_block_start.startswith(marker):
+        #                 lang_part = code_block_start[len(marker):].strip()
+        #                 if lang_part and ' ' not in lang_part:
+        #                     return lang_part
                             
         return None    
 
