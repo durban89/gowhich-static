@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: "Gowhich - Dapeng's Blog"
+title: "Gowhich - Durban's Blog"
 subtitle: '成为全栈开发的必经之路'
 description: '我的日志也许是你的小巨人'
-keywords: '日记本,PHP,Linux,python,ios,java,nodejs,mysql'
-author: 'dapeng'
+keywords: '日记,PHP,Linux,Python,iOS,Java,Nodejs,MySQL'
+author: 'durban'
 email: 'durban.zhang@gmail.com'
 language: 'zh-CN'
 timezone: 'Asia/Shanghai'
