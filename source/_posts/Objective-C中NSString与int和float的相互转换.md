@@ -1,7 +1,7 @@
 ---
-title: Objective-c中NSString与int和float的相互转换.md
+title: Objective-C中NSString与int和float的相互转换.md
 tags:
-  - Objective-c
+  - Objective-C
 categories:
   - 技术
 date: 2025-06-12 17:44:47

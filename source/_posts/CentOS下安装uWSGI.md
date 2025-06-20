@@ -1,7 +1,7 @@
 ---
-title: Centos下安装uWSGI
+title: CentOS下安装uWSGI
 tags:
-  - Centos
+  - CentOS
   - uWSGI
 categories:
   - 技术
