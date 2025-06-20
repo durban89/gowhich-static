@@ -1,7 +1,7 @@
 ---
 title: XCode帮助文档离线使用
 tags:
-  - XCode
+  - Xcode
 categories:
   - 技术
 date: 2025-06-10 13:39:10

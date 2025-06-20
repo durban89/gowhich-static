@@ -1,7 +1,7 @@
 ---
 title: XCode下的iOS单元测试 GHUnit
 tags:
-  - XCode
+  - Xcode
   - iOS
 categories:
   - 技术

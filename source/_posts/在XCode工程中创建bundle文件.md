@@ -1,7 +1,7 @@
 ---
 title: 在XCode工程中创建bundle文件
 tags:
-  - XCode
+  - Xcode
 categories:
   - 技术
 date: 2025-06-20 11:33:19
