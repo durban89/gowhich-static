@@ -1,5 +1,5 @@
 ---
-title: Objective-C 中随机数的用法 （3种：arc4random() 、random()、CCRANDOM_0_1() ）
+title: "Objective-C 中随机数的用法 （3种：arc4random() 、random()、CCRANDOM_0_1() ）"
 tags:
   - Objective-C
 categories:
