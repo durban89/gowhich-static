@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: "Gowhich - Durban's Blog"
-subtitle: '成为全栈开发的必经之路'
-description: '我的日志也许是你的小巨人'
+title: "Gowhich"
+subtitle: "Durban's Blog"
+description: '人最大的烦恼，就是记性太好'
 keywords: '日记,PHP,Linux,Python,iOS,Java,Nodejs,MySQL'
 author: 'durban'
 email: 'durban.zhang@gmail.com'
@@ -108,6 +108,12 @@ feed:
   autodiscovery: true
   template: 
 
+# 生成 sitemap
+# npm install hexo-generator-sitemap --save
+# npm install hexo-generator-baidu-sitemap --save
+sitemap:
+  path: sitemap.xml
+
 marked:
   gfm: true
   pedantic: false
@@ -152,10 +158,20 @@ jsonContent:
     categories: false
     tags: true
     
+# search
+# 配置本地搜索，主站配置 hexo config 
+# 需要安装插件：$ npm install hexo-generator-searchdb --save
+# 详细配置请参考：https://theme-next.js.org/docs/third-party-services/search-services.html#Local-Search
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: indigo
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
