@@ -1,5 +1,5 @@
 ---
-title: python的termcolor包
+title: Python的termcolor包
 tags:
   - Python
 categories:

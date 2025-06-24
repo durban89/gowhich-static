@@ -1,7 +1,7 @@
 ---
 title: Java 基本要素
 tags:
-  - PHP
+  - Java
 categories:
   - 技术
 date: 2025-06-24 15:04:54
