@@ -1,5 +1,5 @@
 ---
-title: python 练习 {if} {while} {for} {break}
+title: Python 练习 {if} {while} {for} {break}
 tags:
   - PHP
 categories:

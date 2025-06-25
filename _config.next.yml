@@ -38,8 +38,8 @@ custom_file_path:
 
 # Schemes
 # scheme: Muse
-#scheme: Mist
-#scheme: Pisces
+# scheme: Mist
+# scheme: Pisces
 scheme: Gemini
 
 # Dark Mode
@@ -54,9 +54,9 @@ favicon:
   small: /images/favicon-16x16.png
   medium: /images/favicon-32x32.png
   apple_touch_icon: /images/apple-touch-icon.png
-  safari_pinned_tab: /images/logo.svg
-  #android_manifest: /manifest.json
-
+  safari_pinned_tab: /images/favicon.svg
+  # android_manifest: /images/manifest.json
+  
 # Custom Logo (Warning: Do not support scheme Mist)
 custom_logo: #/uploads/custom-logo.png
 
@@ -375,7 +375,7 @@ codeblock:
   copy_button:
     enable: true
     # Available values: default | flat | mac
-    style: mac
+    style: flat
   # Fold code block
   fold:
     enable: true
