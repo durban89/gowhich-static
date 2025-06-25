@@ -48,7 +48,5 @@ Also available in template:
 
 参考的文章：
 
-<http://www.djangofoo.com/tag/strip_tags>
-
 <http://snipplr.com/view/50835/>
 
