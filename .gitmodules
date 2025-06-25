@@ -2,3 +2,6 @@
     path = themes/indigo
     url = git@github.com:durban89/gowhich-static-themes-indigo.git
     branch = master
+[submodule "themes/next"]
+	path = themes/next
+	url = git@github.com:durban89/hexo-theme-next.git
