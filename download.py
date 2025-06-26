@@ -165,7 +165,7 @@ class WebPageAnalyzer:
         """
         # 尝试从元素自身的class属性中提取语言
         if element.has_attr('class'):
-            print("code detect 1")
+            # print("code detect 1")
             classes = element.get('class')
             for cls in classes:
                 # 常见的代码语言标记前缀
@@ -188,13 +188,13 @@ class WebPageAnalyzer:
         
         # 尝试从data-language属性中提取
         if element.has_attr('data-language'):
-            print("code detect 2")
+            # print("code detect 2")
             return element.get('data-language')
             
         # 尝试从父元素的class中提取
         parent = element.parent
         if parent and parent.has_attr('class'):
-            print("code detect 3")
+            # print("code detect 3")
             classes = parent.get('class')
             for cls in classes:
                 if cls.startswith('language-') or cls.startswith('lang-'):
@@ -203,7 +203,7 @@ class WebPageAnalyzer:
         # 尝试从子元素中提取语言信息
         # 特别处理 <pre><code class="language-*">...</code></pre> 结构
         if element.name == 'pre':
-            print("code detect 4")
+            # print("code detect 4")
             code_elements = element.find_all('code', recursive=False)
             for code in code_elements:
                 if code.has_attr('class'):
