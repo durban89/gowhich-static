@@ -17,11 +17,11 @@ date: 2025-06-26 11:15:41
 >   
 >     For example::  
 >   
->         <img src='bar.gif' height='10' width='{% widthratio this\_value max\_value 100 %}' />  
+>         <img src='bar.gif' height='10' width='{% widthratio this_value max_value 100 %}' />  
 >   
->     Above, if ``this\_value`` is 175 and ``max\_value`` is 200, the image in  
+>     Above, if `this_value` is 175 and `max_value` is 200, the image in  
 >     the above example will be 88 pixels wide (because 175/200 = .875;  
->     .875 \* 100 = 87.5 which is rounded up to 88).
+>     .875 * 100 = 87.5 which is rounded up to 88).
 
 这说明，widthratio 通常用来显示图表，比例时用的，一个数字占了多少百分比等。但仔细想想，如果将某些数字变成特定的数字，不就是乘除法运算了吗？请看：
 
