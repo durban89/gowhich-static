@@ -1,7 +1,7 @@
 ---
 title: Socket IO 实现 聊天室
 tags:
-  - Socket
+  - SocketIO
 categories:
   - 技术
 date: 2025-06-30 11:49:19
