@@ -7,7 +7,7 @@ categories:
 date: 2025-06-30 15:57:46
 ---
 
-在主机列表中（像osx、[linux](http://www.linuxsong.org/ "Think In linux")的主机文件为`/etc/hosts`, windows系统下在`C:\WINDOWS\system32\drivers\etc`中）添加如下：
+在主机列表中（像MacOS、[linux](http://www.linuxsong.org/ "Think In linux")的主机文件为`/etc/hosts`, windows系统下在`C:\WINDOWS\system32\drivers\etc`中）添加如下：
 
 127.0.0.1 www.gravatar.com  
 127.0.0.1 graph.facebook.com  
