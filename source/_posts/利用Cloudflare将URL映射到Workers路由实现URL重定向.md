@@ -28,12 +28,12 @@ date: 2025-07-03 14:42:38
 
 以上就是事情原因，解决方案就是使用Cloudflare的Workers路由
 
-## [Cloudflare的Workers路由创建]
+## [Cloudflare的Workers路由创建](#1)
 
 ![](https://res.cloudinary.com/dy5dvcuc1/image/upload/v1751526064/2025-07-03_14-53_aggaka.png)
 ![](https://res.cloudinary.com/dy5dvcuc1/image/upload/v1751526195/2025-07-03_15-03_zfymsz.png)
 
-## [Workers路由代码编辑]
+## [Workers路由代码编辑](#2)
 
 我的实现逻辑就是上面说的，代码如下
 
@@ -100,7 +100,7 @@ async function handleRequest(request) {
 
 编辑完之后点击部署就可以了
 
-## [配置]
+## [配置](#3)
 
 点击创建好的路由，配置按照如下步骤
 
