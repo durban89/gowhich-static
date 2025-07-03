@@ -1,7 +1,7 @@
 ---
 title: Webstorm 的序列号和证书
 tags:
-  - Webstorm
+  - WebStorm
 categories:
   - 技术
 date: 2025-06-27 14:14:25

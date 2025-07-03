@@ -1,7 +1,7 @@
 ---
 title: 用Javascript获取页面元素的位置
 tags:
-  - Javascript
+  - JavaScript
 categories:
   - 技术
 date: 2025-06-06 14:28:24

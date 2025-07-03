@@ -2,7 +2,7 @@
 title: Codeigniter 缓存文件的使用 函数封装
 tags:
   - PHP
-  - Codeigniter
+  - CodeIgniter
 categories:
   - 技术
 date: 2025-06-27 14:15:12

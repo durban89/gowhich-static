@@ -2,7 +2,7 @@
 title: Codeigniter 上传单个文件 函数封装
 tags:
   - PHP
-  - Codeigniter
+  - CodeIgniter
 categories:
   - 技术
 date: 2025-06-27 14:15:09

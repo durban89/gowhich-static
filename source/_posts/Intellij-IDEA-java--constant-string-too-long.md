@@ -1,7 +1,7 @@
 ---
 title: "Intellij IDEA java: constant string too long"
 tags:
-  - Intellij
+  - IntelliJ
 categories:
   - 技术
 date: 2025-07-03 11:58:09
