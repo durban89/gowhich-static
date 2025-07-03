@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import markdownify  # 需要安装：pip install markdownify
 from datetime import datetime
 import argparse
+import re
 
 class WebPageAnalyzer:
     def __init__(self, url):
@@ -235,7 +236,7 @@ class WebPageAnalyzer:
         #                 if lang_part and ' ' not in lang_part:
         #                     return lang_part
                             
-        return None    
+        return "bash"    
 
     def html_to_markdown(self, html_content=None, preserve_code_language=True):
         """将HTML内容转换为Markdown格式
@@ -405,6 +406,48 @@ date: {current_time}
 """
         return front_matter
 
+    def remove_copyright_block(self, markdown_content):
+        """移除Markdown内容中的版权声明区块
+        
+        Args:
+            markdown_content: Markdown格式的文本内容
+        """
+        if not markdown_content:
+            return ""
+            
+        permalink_pattern = re.compile(r'^本文永久链接：<[^>]+>$', re.MULTILINE)
+        
+        # 移除匹配的行
+        cleaned_content = permalink_pattern.sub('', markdown_content)
+        
+        # 移除可能残留的空行
+        cleaned_content = re.sub(r'\n\s*\n', '\n\n', cleaned_content).strip()
+
+        # 定义要移除的版权声明模式
+        copyright_patterns = [
+            r'#####\s*版权声明',
+            r'本文首发于\s*!\[.*?\]\(.*?\)\s*\(.*?\)\s*博客\s*\(.*?\)\s*，版权所有，侵权必究。',
+            r'本文首发于\s*\[.*?\]\(.*?\)\s*博客\s*\(.*?\)\s*，版权所有，侵权必究。',
+            r'本文首发于\s*.*?，版权所有，侵权必究。',
+            r'由\s*\[durban\].*?"创作共用保留署名-非商业-禁止演绎4\.0国际许可证。"\)'
+            # 可以添加更多模式...
+        ]
+        
+        # 替换所有匹配的版权声明
+        for pattern in copyright_patterns:
+            cleaned_content = re.sub(pattern, '', cleaned_content, flags=re.DOTALL)
+        
+        # 移除可能残留的空行
+        cleaned_content = re.sub(r'\n\s*\n', '\n\n', cleaned_content).strip()
+        
+        # 检查是否移除了内容
+        if cleaned_content != markdown_content:
+            print("已移除版权声明区块")
+            
+        return cleaned_content
+
+
+
     def save_markdown_to_file(self, markdown_content, file_path, encoding='utf-8', add_front_matter=True):
         """将Markdown内容保存到文件
         
@@ -419,6 +462,9 @@ date: {current_time}
             return False
             
         try:
+
+            markdown_content = self.remove_copyright_block(markdown_content)
+
             # 如果需要添加前置元数据
             if add_front_matter:
                 # 获取页面标题作为文章标题
