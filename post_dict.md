@@ -290,7 +290,7 @@
 278: "/2025/06/19/配置Django的Static文件.html",
 279: "/2025/06/19/NGINX-之-Location基础配置-及-Location最佳实践.html",
 
-280: "/2025/06/19/给-Django-站点添加-favicon.ico.html",
+280: "/2025/06/19/给-Django-站点添加-favicon-ico.html",
 281: "/2025/06/19/Django-模板里面for循环常用的方法.html",
 282: "/2025/06/19/Axure-RP-Pro-6注册码.html",
 283: "/2025/06/19/PHP-汉字转拼音.html",
