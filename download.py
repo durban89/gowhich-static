@@ -282,7 +282,7 @@ class WebPageAnalyzer:
             print(f"元素转Markdown失败: {e}")
             return None
 
-    def replace_keywords(self, text, replacements=None, max_replacements=10):
+    def replace_keywords(self, text, replacements=None, max_replacements=100):
         """替换文本中的指定关键词
         
         Args:
@@ -310,14 +310,29 @@ class WebPageAnalyzer:
             replacements = {k: replacements[k] for k in list(replacements)[:max_replacements]}
             
         # 使用正则表达式进行关键词替换
-        import re
         pattern = re.compile(r'\b(' + '|'.join(re.escape(key) for key in replacements.keys()) + r')\b', re.IGNORECASE)
         
         def replace(match):
             key = match.group(0)
             return replacements.get(key.lower(), key)
             
-        return pattern.sub(replace, text)
+        res = pattern.sub(replace, text)
+
+        # 定义要移除的后缀列表
+        suffixes_to_remove = [
+            " - 随笔 - Gowhich",
+            " - Gowhich",
+            " | Gowhich",
+            # 可以添加更多后缀...
+        ]
+        
+        # 移除指定的后缀
+        for suffix in suffixes_to_remove:
+            if res.endswith(suffix):
+                res = res[:-len(suffix)]
+
+
+        return res
 
     def replace_empty_keywords(self, text, replacements=None, max_replacements=100):
         """替换文本中的指定字符
@@ -393,7 +408,6 @@ class WebPageAnalyzer:
         # 获取当前时间
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         title = self.replace_keywords(title)
-        title = title.split('|')[0].split(' - ')[0].split(':')[0].strip()
 
         front_matter = f"""---
 title: {title}
@@ -502,8 +516,10 @@ if __name__ == "__main__":
     
     analyzer = WebPageAnalyzer(target_url)
     if analyzer.fetch_page():
-        title = analyzer.get_title().split('|')[0].split(' - ')[0].strip()
+        title = analyzer.get_title().strip()
+        print(f"页面标题1: {title}")
         title = analyzer.replace_keywords(title)
+        print(f"页面标题2: {title}")
         title = analyzer.replace_empty_keywords(title)
         title = analyzer.clean_title(title)
 
