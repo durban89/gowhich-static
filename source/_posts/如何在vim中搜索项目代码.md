@@ -1,7 +1,7 @@
 ---
 title: 如何在vim中搜索项目代码
 tags:
-  - VIM
+  - Vim
 categories:
   - 技术
 date: 2025-07-03 16:49:47

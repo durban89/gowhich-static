@@ -1,7 +1,7 @@
 ---
 title: Vim 之 vim-autoformat 自动切换使用本地或全局eslint
 tags:
-  - VIM
+  - Vim
 categories:
   - 技术
 date: 2025-07-03 17:11:50

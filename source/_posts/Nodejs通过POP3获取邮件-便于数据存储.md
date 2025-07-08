@@ -1,7 +1,7 @@
 ---
 title: Nodejs通过POP3获取邮件，便于数据存储
 tags:
-  -  Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-30 15:15:36
