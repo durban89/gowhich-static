@@ -1,7 +1,7 @@
 ---
 title: Nodejs搭建web服务器
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-10 10:40:46

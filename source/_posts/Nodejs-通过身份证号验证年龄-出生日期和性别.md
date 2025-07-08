@@ -1,7 +1,7 @@
 ---
 title: "Nodejs - 通过身份证号验证年龄，出生日期和性别"
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-07-03 11:58:22

@@ -1,7 +1,7 @@
 ---
 title: QQ邮箱这里有破解，Nodejs实现
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-30 14:31:32

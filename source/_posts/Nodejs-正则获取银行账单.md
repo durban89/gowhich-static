@@ -1,7 +1,7 @@
 ---
 title: Nodejs 正则获取银行账单
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-30 14:31:06

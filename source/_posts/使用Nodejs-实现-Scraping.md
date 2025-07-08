@@ -1,7 +1,7 @@
 ---
 title: 使用Nodejs 实现 Scraping
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-30 14:09:15

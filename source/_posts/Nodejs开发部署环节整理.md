@@ -1,7 +1,7 @@
 ---
 title: Nodejs开发部署环节整理
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-07-02 15:40:44

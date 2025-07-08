@@ -1,7 +1,7 @@
 ---
 title: Nodejs+Mailparser+imap获取QQ邮件的内容
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-30 14:09:13

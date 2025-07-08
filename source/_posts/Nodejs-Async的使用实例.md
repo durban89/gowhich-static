@@ -1,7 +1,7 @@
 ---
 title: Nodejs Async的使用实例
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-30 12:01:09

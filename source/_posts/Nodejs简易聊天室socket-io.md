@@ -1,7 +1,7 @@
 ---
 title: Nodejs简易聊天室socket.io
 tags:
-  - Nodejs
+  - NodeJS
   - SocketIO
 categories:
   - 技术

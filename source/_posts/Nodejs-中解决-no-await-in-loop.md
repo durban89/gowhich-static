@@ -1,7 +1,7 @@
 ---
 title: Nodejs 中解决 no-await-in-loop
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-07-03 17:37:49

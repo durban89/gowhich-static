@@ -1,7 +1,7 @@
 ---
 title: Nodejs 之 __dirname 的使用
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-07-03 16:49:55

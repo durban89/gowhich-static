@@ -1,7 +1,7 @@
 ---
 title: Nodejs 实现简单数据抓取
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-30 14:31:16

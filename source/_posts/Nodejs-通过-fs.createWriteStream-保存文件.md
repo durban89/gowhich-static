@@ -1,7 +1,7 @@
 ---
 title: Nodejs 通过 fs.createWriteStream 保存文件
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-07-03 17:37:21

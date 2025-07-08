@@ -2,7 +2,7 @@
 title: Nodejs 在Nginx服务器上部署
 tags:
   - NGINX
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-30 14:09:19

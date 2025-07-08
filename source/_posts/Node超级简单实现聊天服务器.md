@@ -1,7 +1,7 @@
 ---
 title: Node超级简单实现聊天服务器
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-27 14:14:22

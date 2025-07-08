@@ -1,7 +1,7 @@
 ---
 title: "nodejs中express的“Error: Cannot find module 'jade'”错误"
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-17 17:01:09

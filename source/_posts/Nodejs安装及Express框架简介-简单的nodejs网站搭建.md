@@ -1,7 +1,7 @@
 ---
 title: Nodejs安装及Express框架简介-简单的nodejs网站搭建
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-17 16:45:20

@@ -1,7 +1,7 @@
 ---
 title: Nodejs 实现 通过POP3协议进行邮件的收取【指定日期范围】
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-30 14:31:10

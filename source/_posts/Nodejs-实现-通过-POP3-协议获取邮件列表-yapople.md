@@ -1,7 +1,7 @@
 ---
 title: Nodejs 实现 通过 POP3 协议获取邮件列表【yapople】
 tags:
-  - Nodejs
+  - NodeJS
 categories:
   - 技术
 date: 2025-06-30 14:30:58
