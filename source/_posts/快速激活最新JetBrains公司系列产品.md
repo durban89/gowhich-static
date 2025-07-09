@@ -36,7 +36,7 @@ IntelliJIDEALicenseServer 使用方法
 2016/07/21 13:21:39 ** IntelliJ IDEA License Server                            **
 2016/07/21 13:21:39 ** by: ilanyu                                              **
 2016/07/21 13:21:39 ** http://www.lanyus.com/                                  **
-2016/07/21 13:21:39 ** Alipay donation: [email protected]                **
+2016/07/21 13:21:39 ** Alipay donation: xx@xx                **
 2016/07/21 13:21:39 ** Please support genuine!!!                               **
 2016/07/21 13:21:39 ** listen on 0.0.0.0:41015...                              **
 2016/07/21 13:21:39 ** You can use http://127.0.0.1:41015 as license server    **

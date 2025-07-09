@@ -44,7 +44,7 @@ self.window.backgroundColor = [UIColor grayColor];//给window设置一个背景�
 
 实战演练一下：
 
-1)新建一个工程选择Empty Application   名字为practice
+1)新建一个工程选择Empty Application   名字为practice
 
 2)在application didFinishLaunchingWithOptions里面，你会发现系统已经建好一个画框了，我们现在就用系统帮我们建好的画框，你当然也可以自己建一个画框，不过没这个必要了，忘了讲了，一个应用程序只能有一个画框。
 

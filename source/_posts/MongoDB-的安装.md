@@ -73,7 +73,7 @@ sudo /usr/local/bin/mongod --config /etc/mongodb.conf
 尝试一下登陆
 
 ```bash
-[email protected]:~$ mongo
+xx@xx:~$ mongo
 MongoDB shell version: 2.4.6
 connecting to: test
 Welcome to the MongoDB shell.

@@ -44,7 +44,7 @@ $this->redirect(array('index'));进行跳转，不依赖于控制器的名字
 那么，url需要为这个路径传递一个参数id，如
 
 ```php
-$this->redirect(array('admin/default/index', 'id'=>1));
+$this->redirect(array('admin/default/index', 'id'=>1));
 ```
 
 url格式为array('真实路径', '参数名'=>'参数值’，'参数名2'=>'参数值2', ....);  
@@ -62,7 +62,7 @@ $this->createUrl('admin/default/index')
 带参数情况
 
 ```php
-$this->createUrl('admin/default/index', array('id'=>1));
+$this->createUrl('admin/default/index', array('id'=>1));
 ```
 
 admin模块中，使用

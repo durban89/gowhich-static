@@ -132,7 +132,7 @@ int main(int argc, const char * argv[])
         user.nickname = @"Durban";
         user.lastname = @"zhang";
         user.firstname = @"dapeng";
-        user.email = @"[email protected]";
+        user.email = @"xx@xx";
         user.password = @"123456";
         
         //归档处理
@@ -164,6 +164,6 @@ int main(int argc, const char * argv[])
 gowhich得到的结果
 
 ```bash
-2013-11-22 11:30:38.678 CustomArchiveDemo[37027:303] age = 19, email = [email protected], nickname = Durban, lastname = zhang, firstname = dapeng, password = 123456
+2013-11-22 11:30:38.678 CustomArchiveDemo[37027:303] age = 19, email = xx@xx, nickname = Durban, lastname = zhang, firstname = dapeng, password = 123456
 ```
 

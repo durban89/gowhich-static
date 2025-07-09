@@ -8,7 +8,7 @@ date: 2025-06-10 10:40:46
 ---
 nodejs的安装其实是很简单的，官方文档是有直接安装的文件的，之后linux下的稍微麻烦一点，不过只要解压一下，然后直接安装，也是比较简单的。
 
-如果不懂的可以参考我的这篇文章[nodejs的安装，测试，hello world](https://www.gowhich.com/blog/40) 
+如果不懂的可以参考我的这篇文章[nodejs的安装，测试，hello world](https://www.gowhich.com/blog/40) 
 
 下面演示我的web服务器
 

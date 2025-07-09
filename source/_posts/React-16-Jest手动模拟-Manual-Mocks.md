@@ -10,7 +10,7 @@ date: 2025-07-07 16:42:19
 ### **项目初始化**
 
 ```bash
-git clone https://github.com/durban89/webpack4-react16-reactrouter-demo.git 
+git clone https://github.com/durban89/webpack4-react16-reactrouter-demo.git 
 cd webpack4-react16-reactrouter-demo
 git fetch origin
 git checkout v_1.0.27
@@ -25,7 +25,7 @@ npm install
 
 这可以确保您的测试快速且不易碎(not flaky)。
 
-### **模拟水果模块(Mocking fruit modules)**
+### **模拟水果模块(Mocking fruit modules)**
 
 通过在紧邻模块的\_\_mocks\_\_/子目录中编写模块来定义手动模拟。这个方式我在前面文章中的实例中也有用到过，具体的可以参考之前的文章，这里我说下大概的流程
 

@@ -71,7 +71,7 @@ use yii\helpers\Console;
 /**
  * Extracts messages to be translated from source files.
  *
- * @author durban.zhang <[email protected]>
+ * @author durban.zhang <xx@xx>
  */
 class TranslatorController extends MessageController
 {

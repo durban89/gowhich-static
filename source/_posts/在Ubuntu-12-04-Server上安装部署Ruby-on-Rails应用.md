@@ -110,7 +110,7 @@ $ pwd
 /home/jason/
 $ mkdir www
 $ cd www
-$ git clone [email protected]:gitlab.git
+$ git clone xx@xx:gitlab.git
 $ cd gitlab
 $ bundle install
 ```

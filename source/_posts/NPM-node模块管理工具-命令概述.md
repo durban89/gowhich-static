@@ -84,7 +84,7 @@ npm install <name>@<version>
 Example:
 
 ```bash
-npm install [email protected]
+npm install xx@xx
 ```
 
 安装模块指定版本号范围内的某一个版本

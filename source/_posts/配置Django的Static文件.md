@@ -43,7 +43,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('漫步者Feeling', '[email protected]'),
+    ('漫步者Feeling', 'xx@xx'),
 )
 
 MANAGERS = ADMINS

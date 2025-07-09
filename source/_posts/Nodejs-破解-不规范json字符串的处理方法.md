@@ -63,8 +63,8 @@ Json字符串如果不是很规范的话,使用nodejs的JSON方法是无法 进�
 'mailFlag':5,'starType':0,'logoType':1,'denyForward':0, 'auditStatus':0, 'billType':0,'billFlag':0,'subscriptionFlag':0,'secureEncrypt':0,'secureSigned':0,
 'flags':{'successed':1,'selfdestruct':1},
 'label':[],
-'from':'中国移动<[email protected]>',
-'to':'[email protected]',
+'from':'中国移动<xx@xx>',
+'to':'xx@xx',
 'subject':'尊敬的客户，您截至2月15日的积分账单已到，请查阅：巧用积分兑换好礼',
 'summary':'用户号码：15000711265，尊敬的动感地带（M-Zone）客户：\r截止2月15日您的可兑换积分为：1074\r特别说明：\r1.'}
 ]

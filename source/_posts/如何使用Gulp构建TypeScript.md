@@ -241,7 +241,7 @@ gulp.task("browserify", function() {
 gulp.task("default", gulp.series('copy-html', 'browserify'));
 ```
 
-这里的gulp配置可能与以往的不同，需要稍加注意下，这里使用的是[[email protected]](/cdn-cgi/l/email-protection)这个版本  
+这里的gulp配置可能与以往的不同，需要稍加注意下，这里使用的是[xx@xx](/cdn-cgi/l/email-protection)这个版本  
 这里增加了copy-html任务并且把它加作default的依赖项。 这样，当 default执行时，copy-html会被首先执行。 我们还修改了 default任务，让它使用tsify插件调用Browserify，而不是gulp-typescript。 方便的是，两者传递相同的参数对象到TypeScript编译器。
 
 调用bundle后，我们使用source（vinyl-source-stream的别名）输出文件命名为bundle.js。

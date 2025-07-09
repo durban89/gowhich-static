@@ -37,7 +37,7 @@ git show e4f37d08ce8e9d729a824568f3a23d4eeb21ba30
 
 > commit e4f37d08ce8e9d729a824568f3a23d4eeb21ba30
 >
-> Author: durban <[[email protected]](/cdn-cgi/l/email-protection)>
+> Author: durban <[xx@xx](/cdn-cgi/l/email-protection)>
 >
 > Date:   Mon Dec 21 11:26:20 2015 +0800
 >

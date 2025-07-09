@@ -18,7 +18,7 @@ $cd ~/hello-world  //到hello-world目录
 $git init 	//初始化
 $git add .//把所有文件加入到索引（不想把所有文件加入，可以用gitignore或add 具体文件)
 $git commit                                                               //提交到本地仓库，然后会填写更新日志( -m “更新日志”也可)
-$git remote add origin [email protected]:zhangda89/hello-world.git            //增加到remote
+$git remote add origin xx@xx:zhangda89/hello-world.git            //增加到remote
 $git push origin master                                                    //push到github上
 ```
 
@@ -51,7 +51,7 @@ $vim .gitignore  //把文件类型加入到.gitignore中，保存
 ### [clone代码到本地：](#5)
 
 ```bash
-$git clone [email protected]:zhangda89/hello-world.git //假如本地已经存在了代码，而仓库里有更新，把更改的合并到本地的项目：
+$git clone xx@xx:zhangda89/hello-world.git //假如本地已经存在了代码，而仓库里有更新，把更改的合并到本地的项目：
 $git fetch origin   //获取远程更新
 $git merge origin/master  //把更新的内容合并到本地分支
 ```

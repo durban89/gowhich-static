@@ -31,7 +31,7 @@ sudo gitlab-rake rails console
 第三步：找到对应的用户直接修改
 
 ```bash
-user = User.find_by(email: '[email protected]')
+user = User.find_by(email: 'xx@xx')
 user.password = 'secret_pass'
 user.password_confirmation = 'secret_pass'
 user.save

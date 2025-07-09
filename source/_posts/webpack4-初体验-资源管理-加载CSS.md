@@ -95,7 +95,7 @@ document.body.appendChild(component());
 ```bash
 $ npm run build
 
-> [email protected] build /Users/durban/nodejs/webpack4-demo
+> xx@xx build /Users/durban/nodejs/webpack4-demo
 > webpack
 
 Hash: a4ca66fcccee921aa2ec

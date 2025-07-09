@@ -89,7 +89,7 @@ Host git.oschina.net
 4. 测试ssh key是否配置成功
 
 ```bash
-ssh -T [email protected]
+ssh -T xx@xx
 ```
 
 成功的话会显示：

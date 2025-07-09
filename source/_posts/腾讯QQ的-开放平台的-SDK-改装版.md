@@ -17,7 +17,7 @@ date: 2025-06-20 10:36:45
 <?php
 /* PHP SDK
  * @version 2.0.0
- * @author [email protected]
+ * @author xx@xx
  * @copyright © 2013, Tencent Corporation. All rights reserved.
  */
 define("ROOT",dirname(dirname(__FILE__))."/");
@@ -142,7 +142,7 @@ class Oauth{
 /**
  * PHP SDK
  * @version 2.0.0
- * @author [email protected]
+ * @author xx@xx
  * @copyright © 2013, Tencent Corporation. All rights reserved.
  */
 class Recorder{
@@ -200,7 +200,7 @@ class Recorder{
 /**
  * PHP SDK
  * @version 2.0.0
- * @author [email protected]
+ * @author xx@xx
  * @copyright © 2013, Tencent Corporation. All rights reserved.
  */
 class URL{

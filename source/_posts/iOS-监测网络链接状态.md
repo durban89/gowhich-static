@@ -9,7 +9,7 @@ date: 2025-06-11 10:44:13
 
 使用之前请从Apple网站下载示例：[点此下载](https://developer.apple.com/library/ios/samplecode/Reachability/Reachability.zip)
 
-然后将Reachability.h 和 Reachability.m 加到自己的项目中，并引用 SystemConfiguration.framework，就可以使用了。
+然后将Reachability.h 和 Reachability.m 加到自己的项目中，并引用 SystemConfiguration.framework，就可以使用了。
 
 Reachability 中定义了3种网络状态：
 

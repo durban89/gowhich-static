@@ -22,7 +22,7 @@ date: 2025-07-03 11:59:11
 # # Email account username
 # # With third party providers, this is usually the full email address.
 # # With self-hosted email servers, this is usually the user part of the email address.
- gitlab_rails['incoming_email_email'] = "[email protected]"
+ gitlab_rails['incoming_email_email'] = "xx@xx"
 # # Email account password
  gitlab_rails['incoming_email_password'] = "xxxxx"
 #

@@ -45,7 +45,7 @@ index.html
 <html>
   <head>
     <title>起步</title>
-    <script src="https://unpkg.com/[email protected]"></script>
+    <script src="https://unpkg.com/xx@xx"></script>
   </head>
   <body>
     <script src="./src/index.js"></script>
@@ -236,7 +236,7 @@ package.json
 ```bash
 $ npm run build
 
-> [email protected] build /Users/durban/nodejs/webpack4-demo
+> xx@xx build /Users/durban/nodejs/webpack4-demo
 > webpack
 
 Hash: b983ef9ac0012695b0e5

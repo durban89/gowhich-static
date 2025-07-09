@@ -292,7 +292,7 @@ smap <silent> <C-e> <Plug>(neocomplcache_snippets_expand)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: amix the lucky stiff
-"             http://amix.dk - [email protected]
+"             http://amix.dk - xx@xx
 "
 " Version: 3.6 - 25/08/10 14:40:30
 "

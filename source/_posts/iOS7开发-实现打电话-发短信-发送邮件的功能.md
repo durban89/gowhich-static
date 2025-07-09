@@ -12,7 +12,7 @@ date: 2025-06-26 10:32:37
 1、调用 自带mail
 
 ```objectivec
-[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://[email protected]"]];
+[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://xx@xx"]];
 ```
 
 2、调用 电话phone

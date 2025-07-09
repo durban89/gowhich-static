@@ -36,7 +36,7 @@ export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
 但是安装完 运行下面的命令
 
 ```bash
-exec $HOME/bin/zsh -l 
+exec $HOME/bin/zsh -l 
 ```
 
 会发生一直卡住不动，暂时不知道原因，哪位高手遇到解决了，可以留言给我，一起探讨。

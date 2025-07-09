@@ -101,7 +101,7 @@ pm2 ecosystem
       "user" : "node",//登录账号
       "host" : "212.83.163.1",//服务器地址
       "ref"  : "origin/master",//git 分支
-      "repo" : "[email protected]:repo.git",//git地址
+      "repo" : "xx@xx:repo.git",//git地址
       "path" : "/var/www/production",//服务器项目目录
       "post-deploy" : "pm2 startOrRestart ecosystem.json5 --env production"
     },
@@ -109,7 +109,7 @@ pm2 ecosystem
       "user" : "node",
       "host" : "212.83.163.1",
       "ref"  : "origin/master",
-      "repo" : "[email protected]:repo.git",
+      "repo" : "xx@xx:repo.git",
       "path" : "/var/www/development",
       "post-deploy" : "pm2 startOrRestart ecosystem.json5 --env dev",
       "env"  : {
@@ -155,17 +155,17 @@ xx@xx:~/nodejs/node-react$ pm2 deploy ecosystem.json5 production
   ○ deploying
   ○ hook pre-deploy
   ○ fetching updates
-[email protected]'s password: 
+xx@xx's password: 
 Fetching origin
 From https://git.oschina.net/zhangdapeng89/node-react
    4456ce1..c45f87c  master     -> origin/master
   ○ resetting HEAD to origin/master
-[email protected]'s password: 
+xx@xx's password: 
 HEAD is now at c45f87c 添加eco
-[email protected]'s password: 
-[email protected]'s password: 
+xx@xx's password: 
+xx@xx's password: 
   ○ executing post-deploy `pm2 startOrRestart ecosystem.json5 --env production`
-[email protected]'s password: 
+xx@xx's password: 
 ┌──────────┬────┬──────┬───────┬────────┬─────────┬────────┬──────────────┬──────────┐
 │ App name │ id │ mode │ pid   │ status │ restart │ uptime │ memory       │ watching │
 ├──────────┼────┼──────┼───────┼────────┼─────────┼────────┼──────────────┼──────────┤

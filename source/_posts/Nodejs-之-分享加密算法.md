@@ -11,7 +11,7 @@ date: 2025-07-03 11:08:24
 
 ```js
 /**
- * @author zhandapeng <[email protected]>
+ * @author zhandapeng <xx@xx>
  * @date 7/12/2016
  *
  * openssl pkcs12 -in 9f_KDJZ_private.pfx -out 9f_KDJZ_private.pem -nodes   

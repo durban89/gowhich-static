@@ -23,7 +23,7 @@ var fs = require('fs'), fileStream;
 
 
 var imap = new IMAP({
-	user:'[email protected]',
+	user:'xx@xx',
 	password:'password',
 	host:'imap.qq.com',
 	port:'993',

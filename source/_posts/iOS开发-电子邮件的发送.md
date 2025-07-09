@@ -85,9 +85,9 @@ MailViewController.m
     [picker setSubject:@"Hello from California!"];
     
     // Set up recipients
-    NSArray *toRecipients = [NSArray arrayWithObject:@"[email protected]"];
-    NSArray *ccRecipients = [NSArray arrayWithObjects:@"[email protected]", @"[email protected]", nil];
-    NSArray *bccRecipients = [NSArray arrayWithObject:@"[email protected]"];
+    NSArray *toRecipients = [NSArray arrayWithObject:@"xx@xx"];
+    NSArray *ccRecipients = [NSArray arrayWithObjects:@"xx@xx", @"xx@xx", nil];
+    NSArray *bccRecipients = [NSArray arrayWithObject:@"xx@xx"];
     
     [picker setToRecipients:toRecipients];
     [picker setCcRecipients:ccRecipients];

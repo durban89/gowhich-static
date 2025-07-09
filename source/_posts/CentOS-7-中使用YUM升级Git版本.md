@@ -12,7 +12,7 @@ date: 2025-07-07 16:41:37
 ```bash
 sudo yum install https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum erase git
-sudo yum install epel-release 
+sudo yum install epel-release 
 sudo yum install git2u
 ```
 
