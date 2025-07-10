@@ -12,9 +12,9 @@ date: 2025-07-10 10:58:10
 ## Reactjs安装
 
 ```html
-<script src="/static/js/@babel/[email protected]/babel.min.js"></script>
-<script src="/static/js/[email protected]/umd/react.production.min.js" crossorigin></script>
-<script src="/static/js/[email protected]/umd/react-dom.production.min.js" crossorigin></script>
+<script src="/static/js/@babel/[email protected]/babel.min.js"></script>
+<script src="/static/js/[email protected]/umd/react.production.min.js" crossorigin></script>
+<script src="/static/js/[email protected]/umd/react-dom.production.min.js" crossorigin></script>
 ```
 
 这里使用了babel是为了对jsx语法进行转义，将react语法转义为es5通用语法。同时也可以将一些es6语法进行部分转义，为什么说是部分，因为在遇到async/await的时候，并没有进行转义，这个问题有待解决。我试过绑定plugins的方式，但是结果都不是很理想。
