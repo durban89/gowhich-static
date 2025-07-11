@@ -587,7 +587,7 @@ pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox/
-fancybox: false
+fancybox: true
 
 # Medium Zoom is a JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
@@ -922,6 +922,9 @@ vendors:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
   custom_cdn_url:
+
+  fancybox_js: //cdn.jsdelivr.net/npm/@fancyapps/ui@6.0.11/dist/fancybox/fancybox.umd.min.js
+  fancybox_css: //cdn.jsdelivr.net/npm/@fancyapps/ui@6.0.11/dist/fancybox/fancybox.min.css
 
 # Assets
 # Accelerate delivery of static files using a CDN
