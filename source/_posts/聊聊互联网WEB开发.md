@@ -3,7 +3,6 @@ title: 聊聊互联网WEB开发
 tags:
   - WEB
 categories:
-  - 技术
   - 杂谈
 date: 2025-07-10 11:52:34
 ---
