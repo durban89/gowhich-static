@@ -226,7 +226,7 @@ footer:
 
   # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, https://beian.mps.gov.cn
   beian:
-    enable: false
+    enable: true
     icp: "蒙ICP备18003023号-4"
     # The digit in the num of gongan beian.
     gongan_id:
