@@ -1,5 +1,5 @@
 ---
-title: TypeScript挑战（十）- 通用MyReadonly2<T, K>
+title: "TypeScript挑战（十）- 通用MyReadonly2<T, K>"
 tags:
   - TypeScript
 categories:
